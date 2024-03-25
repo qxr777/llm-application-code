@@ -10,7 +10,8 @@ llm = ChatOpenAI()
 # llm = ChatGoogleGenerativeAI(temperature=0, model="gemini-pro")
 
 # 创建Prompt
-prompt = ChatPromptTemplate.from_template("{question}")
+# prompt = ChatPromptTemplate.from_template("{question}")
+prompt = ChatPromptTemplate.from_template("对问题{question}，进行更详尽的分析，并给出1000字的答案")
 
 # 创建输出解析器
 output_parser = StrOutputParser()
