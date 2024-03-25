@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "tagging-chain"
+version = "0.1.0"
+description = ""
+authors = ["Xin Qi <qxr777@whut.edu.cn>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.1.13"
+langchain-openai = "^0.1.1"
+pydantic = "1.10.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

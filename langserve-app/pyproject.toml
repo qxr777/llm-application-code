@@ -9,17 +9,26 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.11,<3.13"
 uvicorn = "^0.23.2"
 langserve = {extras = ["server"], version = ">=0.0.30"}
 pydantic = "<2"
+tiktoken = ">=0.5.1"
+pinecone-client = ">=2.2.4"
+beautifulsoup4 = "^4.12.2"
+langchain-text-splitters = ">=0.0.1,<0.1"
+langchain-pinecone = ">=0.0.3,<0.1"
+dotenv = ">=0.0.5"
 rag-conversation = {path = "packages/rag-conversation", develop = true}
 extraction-openai-functions = {path = "packages/extraction-openai-functions", develop = true}
 openai-functions-agent = {path = "packages/openai-functions-agent", develop = true}
 anthropic-iterative-search = {path = "packages/anthropic-iterative-search", develop = true}
 gemini-functions-agent = {path = "packages/gemini-functions-agent", develop = true}
 openai-functions-tool-retrieval-agent = {path = "packages/openai-functions-tool-retrieval-agent", develop = true}
-
+simple-chain = {path = "packages/simple-chain", develop = true}
+simple-tool-agent = {path = "packages/simple-tool-agent", develop = true}
+dag-chain = {path = "packages/dag-chain", develop = true}
+tagging-chain = {path = "packages/tagging-chain", develop = true}
 
 [tool.poetry.group.dev.dependencies]
 langchain-cli = ">=0.0.15"
