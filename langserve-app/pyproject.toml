@@ -18,7 +18,6 @@ pinecone-client = ">=2.2.4"
 beautifulsoup4 = "^4.12.2"
 langchain-text-splitters = ">=0.0.1,<0.1"
 langchain-pinecone = ">=0.0.3,<0.1"
-dotenv = ">=0.0.5"
 rag-conversation = {path = "packages/rag-conversation", develop = true}
 extraction-openai-functions = {path = "packages/extraction-openai-functions", develop = true}
 openai-functions-agent = {path = "packages/openai-functions-agent", develop = true}
