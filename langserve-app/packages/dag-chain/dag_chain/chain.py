@@ -45,3 +45,5 @@ chain = (
         }
         | summary_chain
 )
+# 打印chain的计算图
+chain.get_graph().print_ascii()
