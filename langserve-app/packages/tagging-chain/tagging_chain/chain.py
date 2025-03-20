@@ -11,8 +11,11 @@ prompt = ChatPromptTemplate.from_messages([("system", template), ("human", "{inp
 # 定义pydantic类用以生成openai的函数描述变量
 class Tagging(BaseModel):
     """Tag the piece of text with particular info."""
-    sentiment: str = Field(description="sentiment of text, should be `pos`, `neg`, or `neutral`")
+    sentiment: str = Field(description="sentiment of text, should be `positive`, `negative`, or `neutral`")
     language: str = Field(description="language of text (should be ISO 639-1 code)")
+    category: str = Field(description="category of text, should be `politics`, `sports`, `entertainment`, 'economics', "
+                                      "'science', 'technology' or `other`")
+    tags: str = Field(description="tags")
 
 
 # Function definition
@@ -20,4 +23,3 @@ model = ChatOpenAI()
 function = [convert_to_openai_function(Tagging)]
 
 chain = prompt | model.bind(functions=function, function_call={"name": "Tagging"}) | JsonOutputFunctionsParser()
-

@@ -13,6 +13,7 @@ from simple_tool_agent import agent_executor as simple_tool_agent_chain
 from tagging_chain import chain as tagging_chain_chain
 from openai_functions_tool_retrieval_agent import agent_executor as openai_functions_tool_retrieval_agent_chain
 from blogging_ai_chain import chain as blogging_ai_chain_chain
+from react_trace_agent import agent_executor as react_trace_agent_chain
 
 app = FastAPI()
 
@@ -34,6 +35,7 @@ add_routes(app, simple_tool_agent_chain, path="/simple-tool-agent")
 add_routes(app, tagging_chain_chain, path="/tagging-chain")
 add_routes(app, openai_functions_tool_retrieval_agent_chain, path="/openai-functions-tool-retrieval-agent")
 add_routes(app, blogging_ai_chain_chain, path="/blogging-ai-chain")
+add_routes(app, react_trace_agent_chain, path="/react-trace-agent")
 
 if __name__ == "__main__":
     import uvicorn

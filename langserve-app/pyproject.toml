@@ -29,6 +29,7 @@ simple-chain = {path = "packages/simple-chain", develop = true}
 simple-tool-agent = {path = "packages/simple-tool-agent", develop = true}
 dag-chain = {path = "packages/dag-chain", develop = true}
 tagging-chain = {path = "packages/tagging-chain", develop = true}
+bloggging-ai-chain = {path = "packages/blogging-ai-chain", develop = true}
 
 [tool.poetry.group.dev.dependencies]
 langchain-cli = ">=0.0.15"
